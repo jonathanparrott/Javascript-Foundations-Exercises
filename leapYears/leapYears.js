@@ -15,7 +15,16 @@ const leapYears = function(year) {
         return false
     }
     
+}
 
+module.exports = leapYears
+
+
+var leapYears = function(year) {
+    let isMultipleOfFour = year % 4 === 0
+    let isNotMultipleOfHundredAndIsMultipleOfFourHundred = (year % 100 !== 0 && year % 400 == 0)
+
+    return isMultipleOfFour && isNotMultipleOfHundredAndIsMultipleOfFourHundred
 }
 
 module.exports = leapYears
